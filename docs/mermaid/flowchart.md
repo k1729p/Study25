@@ -2,7 +2,7 @@
 flowchart LR
     subgraph Docker
         subgraph " "
-            CURL([Curl])
+            CURL(((Curl)))
             subgraph SpringBoot Applications
                 COM[Company]:::cyanBox
                 RSA[Resource Server A]:::greenBox
@@ -11,9 +11,9 @@ flowchart LR
         end
     end
 %% Flows
-    CURL <== plain<br> text ==> COM
-    CURL <== plain<br> text ==> RSA
-    CURL <== plain<br> text ==> RSB
+    CURL <== GraphQL Mutation<br>GraphQL Query ==> COM
+    CURL <== GraphQL Mutation<br>GraphQL Query ==> RSA
+    CURL <== GraphQL Mutation<br>GraphQL Query ==> RSB
 %% Style Definitions
     style Docker fill: lightblue
     classDef greenBox fill: #00ff00, stroke: #000, stroke-width: 3px
@@ -27,11 +27,11 @@ flowchart LR
         RSA[Resource Server A]:::greenBox
         RSB[Resource Server B]:::yellowBox
     end
-    CURL([Curl])
+    CURL(((Curl)))
 %% Flows
-    CURL <== plain<br> text ==> COM
-    CURL <== plain<br> text ==> RSA
-    CURL <== plain<br> text ==> RSB
+    CURL <== GraphQL Mutation<br>GraphQL Query ==> COM
+    CURL <== GraphQL Mutation<br>GraphQL Query ==> RSA
+    CURL <== GraphQL Mutation<br>GraphQL Query ==> RSB
 %% Style Definitions
     classDef greenBox fill: #00ff00, stroke: #000, stroke-width: 3px
     classDef cyanBox fill: #00ffff, stroke: #000, stroke-width: 3px
