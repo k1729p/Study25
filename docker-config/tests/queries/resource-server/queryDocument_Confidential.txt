@@ -1,0 +1,10 @@
+{
+    "query" : "{
+        queryDocument {
+            id
+            officialInformation
+            restrictedInformation
+            confidentialInformation
+        }
+    }"
+}

@@ -1,0 +1,12 @@
+query($id: ID) {
+    queryDepartmentById(id: $id) {
+        id
+        name
+        employees {
+            id
+            firstName
+            lastName
+            title
+        }
+    }
+}

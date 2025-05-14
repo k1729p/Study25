@@ -1,0 +1,6 @@
+mutation($documentInput: DocumentInput!) {
+    mutateDocumentClassificationLevelConfidential(document: $documentInput) {
+        success
+        id
+    }
+}

@@ -1,0 +1,6 @@
+query {
+    queryDocument {
+        id
+        officialInformation
+    }
+}

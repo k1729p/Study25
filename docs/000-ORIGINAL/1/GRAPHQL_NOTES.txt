@@ -1,0 +1,28 @@
+Learn GraphQL
+https://graphql.org/learn/
+
+GraphQL’s conceptual model is an entity graph.
+GraphQL server operates on a single URL/endpoint, usually '/graphql'.
+- - - - - - - - - - - - - - - - - - - - - - - - -
+https://blog.logrocket.com/graphql-vs-rest-api-why-you-shouldnt-use-graphql/
+https://www.infoworld.com/article/3684411/5-reasons-developers-love-graphql-and-5-reasons-they-hate-it.html
+- - - - - - - - - - - - - - - - - - - - - - - - -
+Spring for GraphQL
+  https://spring.io/projects/spring-graphql
+Spring for GraphQL API
+  https://docs.spring.io/spring-graphql/docs/current-SNAPSHOT/api/
+- - - - - - - - - - - - - - - - - - - - - - - - -
+Spring Guides GraphQL Server:
+  https://spring.io/guides/gs/graphql-server
+  https://github.com/spring-guides/gs-graphql-server
+- - - - - - - - - - - - - - - - - - - - - - - - -
+GraphQL Specification: https://spec.graphql.org/October2021/
+- - - - - - - - - - - - - - - - - - - - - - - - -
+AST - Abstract Syntax Tree
+DGS - Domain Graph Service, it is a framework created by the Netflix
+SDL - Schema Definition Language
+- - - - - - - - - - - - - - - - - - - - - - - - -
+Testcontainers
+    https://java.testcontainers.org/
+    https://docs.spring.io/spring-boot/docs/3.3.0-RC1/reference/html/features.html#features.testing.testcontainers
+    https://docs.spring.io/spring-boot/docs/3.3.0-RC1/reference/html/features.html#features.testing.testcontainers.at-development-time

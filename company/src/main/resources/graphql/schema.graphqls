@@ -1,0 +1,75 @@
+"Root mutation type defining operations for modifying company data."
+type Mutation {
+    "Replaces all departments with the provided list of departments."
+    mutateDepartments(departments: [DepartmentInput!]!): DepartmentMutationResult!
+}
+"Root query type defining operations for retrieving company data."
+type Query {
+    "Gets all departments in the company."
+    queryDepartments: [Department]!
+    "Gets a specific department by its ID."
+    queryDepartmentById(id: ID): Department
+    "Gets the count of employees grouped by their titles."
+    queryEmployeesCountByTitle: [EmployeesCountByTitle]!
+}
+"Represents a department within the company."
+type Department {
+    "Unique identifier for the department."
+    id: ID!
+    "Name of the department."
+    name: String!
+    "List of employees belonging to the department."
+    employees: [Employee]!
+}
+"Represents an employee within a department."
+type Employee {
+    "Unique identifier for the employee."
+    id: ID!
+    "First name of the employee."
+    firstName: String!
+    "Last name of the employee."
+    lastName: String!
+    "Job title of the employee."
+    title: Title!
+}
+"Enumeration of possible job titles for employees."
+enum Title {
+    "Employee with a role of Analyst."
+    ANALYST
+    "Employee with a role of Developer."
+    DEVELOPER
+    "Employee with a role of Manager."
+    MANAGER
+}
+"Input type for providing department data in mutation operations."
+input DepartmentInput {
+    "Unique identifier for the department."
+    id: ID!
+    "Name of the department."
+    name: String!
+    "List of employees belonging to the department."
+    employees: [EmployeeInput]!
+}
+"Input type for providing employee data in mutation operations."
+input EmployeeInput {
+    "Unique identifier for the employee."
+    id: ID!
+    "First name of the employee."
+    firstName: String!
+    "Last name of the employee."
+    lastName: String!
+    "Job title of the employee."
+    title: Title!
+}
+"Represents the count of employees grouped by their job titles."
+type EmployeesCountByTitle {
+    "The job title of the employees."
+    title: Title!
+    "The number of employees with this job title."
+    count: Int!
+}
+"Represents the result of a department mutation operation."
+type DepartmentMutationResult {
+    "Indicates whether the department mutation operation was successful."
+    success: Boolean!
+}

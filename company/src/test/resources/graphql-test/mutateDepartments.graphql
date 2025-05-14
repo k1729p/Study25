@@ -1,0 +1,15 @@
+mutation {
+    mutateDepartments(departments : [ {
+        id : 1,
+        name : "N-1",
+        employees : [ {
+            id : 11,
+            firstName : "F-N-11",
+            lastName : "L-N-11"
+            title : ANALYST
+        } ]
+    } ]
+    ) {
+        success
+    }
+}

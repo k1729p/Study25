@@ -1,0 +1,7 @@
+query {
+    queryDocument {
+        id
+        officialInformation
+        restrictedInformation
+    }
+}
