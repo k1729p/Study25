@@ -1,0 +1,6 @@
+server:
+  port: 9091
+spring:
+  config:
+    activate:
+      on-profile: local

@@ -1,0 +1,23 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: resource-server-b
+  graphql:
+    schema:
+      printer:
+        enabled: true
+  output:
+    ansi:
+      enabled: always
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+custom:
+  passwords:
+    password_official: clandestine
+    password_restricted: clandestine
+    password_confidential: clandestine
+    password_secret: clandestine

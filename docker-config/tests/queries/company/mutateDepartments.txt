@@ -1,0 +1,44 @@
+{
+    "query" : "mutation {
+        mutateDepartments(departments : [
+             {
+                id : 1,
+                name : \"D-N-1\",
+                employees : [
+                    {
+                        id : 11,
+                        firstName : \"E-F-N-11\",
+                        lastName : \"E-L-N-11\"
+                        title : MANAGER
+                    }
+                    {
+                        id : 12,
+                        firstName : \"E-F-N-12\",
+                        lastName : \"E-L-N-12\"
+                        title : ANALYST
+                    }
+                ]
+             }
+             {
+                id : 2,
+                name : \"D-N-2\",
+                employees : [
+                    {
+                        id : 21,
+                        firstName : \"E-F-N-21\",
+                        lastName : \"E-L-N-21\"
+                        title : MANAGER
+                    }
+                    {
+                        id : 22,
+                        firstName : \"E-F-N-22\",
+                        lastName : \"E-L-N-22\"
+                        title : DEVELOPER
+                    }
+                ]
+             }
+         ] ) {
+            success
+        }
+    }"
+}

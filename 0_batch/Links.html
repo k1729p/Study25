@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Study 25</title>
+    <style>
+        body {
+          background-color: lightyellow;
+        }
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+        .code {
+          padding: 5px;
+          width: 50%;
+          border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+<h1>Study 25</h1>
+
+<h3>GraphiQL</h3>
+<ul>
+    <li>Application 'company' <a href="http://localhost:9091/graphiql?path=/graphql">http://localhost:9091/graphiql?path=/graphql</a>
+    </li>
+</ul>
+<p>
+    Copy mutation or query into the 'GraphiQL' and run this in it:
+</p>
+<div class="container">
+    <div class="code">
+
+<pre>
+mutation Departments {
+    mutateDepartments(departments : {
+      id: 1,
+      name: "D-N-1",
+      employees: [{
+        id: 11,
+        firstName : "E-F-N-11",
+        lastName : "E-L-N-11"
+        title : DEVELOPER
+      }]
+    }) {
+        success
+    }
+}
+</pre>
+    </div>
+    <div class="code">
+<pre>
+query Departments {
+  queryDepartments {
+    ... queryDepartment
+  }
+}
+fragment queryDepartment on Department {
+    name
+    employees {
+      ... queryEmployee
+    }
+}
+fragment queryEmployee on Employee {
+      lastName
+}
+</pre>
+    </div>
+</div>
+<hr>
+
+<h3>Actuator</h3>
+<ul>
+    <li>Application 'company' <a href="http://localhost:9091/actuator">http://localhost:9091/actuator</a></li>
+    <li>Application 'resource-server-a' <a href="http://localhost:9092/actuator">http://localhost:9092/actuator</a></li>
+    <li>Application 'resource-server-b' <a href="http://localhost:9093/actuator">http://localhost:9093/actuator</a></li>
+</ul>
+<hr>
+</body>
+</html>

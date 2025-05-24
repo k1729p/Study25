@@ -1,0 +1,8 @@
+{
+    "query" : "{
+        queryEmployeesCountByTitle {
+            title
+            count
+        }
+    }"
+}

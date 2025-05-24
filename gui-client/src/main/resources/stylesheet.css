@@ -1,0 +1,83 @@
+.kp-actions-box {
+  -fx-padding: 10 0 0 0;
+}
+.kp-endpoints-box {
+  -fx-min-width: 210;
+  -fx-max-width: 210;
+  -fx-border-color: green;
+  -fx-border-style: solid;
+  -fx-border-width: 1;
+}
+.kp-users-box {
+  -fx-min-width: 80;
+  -fx-max-width: 80;
+  -fx-border-color: magenta;
+  -fx-border-style: solid;
+  -fx-border-width: 1;
+}
+.kp-buttons-box {
+  -fx-min-width: 220;
+  -fx-max-width: 220;
+  -fx-padding: 10 10 10 10;
+  -fx-border-color: orange;
+  -fx-border-style: solid;
+  -fx-border-width: 1;
+  -fx-alignment: top-right;
+}
+.kp-radio-label {
+  -fx-font: 16px Arial;
+  -fx-padding: 10 10 5 10;
+}
+.kp-radio {
+  -fx-padding: 2 10 12 10;
+}
+.kp-button {
+  -fx-font: 16px Arial;
+  -fx-min-width: 200;
+  -fx-max-width: 200;
+  -fx-alignment: center-left;
+}
+.kp-table-label {
+  -fx-font: 16px Arial;
+}
+.table-view .column-header-background .kp-column-official {
+  -fx-background-color: greenyellow;
+  -fx-background-insets: 2 2 2 2;
+}
+.table-view .column-header-background .kp-column-restricted {
+  -fx-background-color: cyan;
+  -fx-background-insets: 2 2 2 2;
+}
+.table-view .column-header-background .kp-column-confidential {
+  -fx-background-color: yellow;
+  -fx-background-insets: 2 2 2 2;
+}
+.table-view .column-header-background .kp-column-secret {
+  -fx-background-color: pink;
+  -fx-background-insets: 2 2 2 2;
+}
+.kp-document-label-id,
+.kp-document-label-official, .kp-document-label-restricted,
+.kp-document-label-confidential, .kp-document-label-secret {
+  -fx-padding: 2 2 2 4;
+  -fx-min-width: 140;
+  -fx-max-width: 140;
+  -fx-border-color: black;
+}
+.kp-document-label-official {
+  -fx-background-color: greenyellow;
+}
+.kp-document-label-restricted {
+  -fx-background-color: cyan;
+}
+.kp-document-label-confidential {
+  -fx-background-color: yellow;
+}
+.kp-document-label-secret {
+  -fx-background-color: pink;
+}
+.kp-document-grid-pane {
+    -fx-padding: 10 0 0 0;
+    -fx-hgap: 10;
+    -fx-vgap: 25;
+}

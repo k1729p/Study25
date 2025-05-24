@@ -1,0 +1,6 @@
+query {
+    queryEmployeesCountByTitle {
+        title
+        count
+    }
+}

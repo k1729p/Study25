@@ -1,0 +1,6 @@
+mutation($documentInput: DocumentInput!) {
+    mutateDocumentClassificationLevelOfficial(document: $documentInput) {
+        success
+        id
+    }
+}

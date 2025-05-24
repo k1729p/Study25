@@ -1,0 +1,14 @@
+{
+    "query" : "{
+        queryDepartments {
+            id
+            name
+            employees {
+                id
+                firstName
+                lastName
+                title
+            }
+        }
+    }"
+}

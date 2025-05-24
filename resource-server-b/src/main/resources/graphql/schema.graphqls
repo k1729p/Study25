@@ -1,0 +1,53 @@
+"Directive used for authorization to access information with a given classification level in a document."
+directive @auth(role: String!) on FIELD_DEFINITION
+"Root mutation type defining operations for modifying documents with different classification levels."
+type Mutation {
+    "Mutates the document with classification level 'official'."
+    mutateDocumentClassificationLevelOfficial(document: DocumentInput!): DocumentMutationResult @auth(role: "LEVEL_OFFICIAL")
+    "Mutates the document with classification level 'restricted'."
+    mutateDocumentClassificationLevelRestricted(document: DocumentInput!): DocumentMutationResult @auth(role: "LEVEL_RESTRICTED")
+    "Mutates the document with classification level 'confidential'."
+    mutateDocumentClassificationLevelConfidential(document: DocumentInput!): DocumentMutationResult @auth(role: "LEVEL_CONFIDENTIAL")
+    "Mutates the document with classification level 'secret'."
+    mutateDocumentClassificationLevelSecret(document: DocumentInput!): DocumentMutationResult @auth(role: "LEVEL_SECRET")
+    "Deletes all documents."
+    deleteAllDocuments: DocumentMutationResult @auth(role: "LEVEL_SECRET")
+}
+"Root query type defining operations for fetching documents."
+type Query {
+    "Queries a list of documents."
+    queryDocument: [Document]
+}
+"Defines the structure of a document object containing information with varying classification levels."
+type Document {
+    "Unique identifier for the document."
+    id: ID!
+    "Information classified as 'official'. Accessible with the appropriate role."
+    officialInformation: String @auth(role: "LEVEL_OFFICIAL")
+    "Information classified as 'restricted'. Accessible with the appropriate role."
+    restrictedInformation: String @auth(role: "LEVEL_RESTRICTED")
+    "Information classified as 'confidential'. Accessible with the appropriate role."
+    confidentialInformation: String @auth(role: "LEVEL_CONFIDENTIAL")
+    "Information classified as 'secret'. Accessible with the appropriate role."
+    secretInformation: String @auth(role: "LEVEL_SECRET")
+}
+"Input type for providing document data to mutation operations."
+input DocumentInput {
+    "Unique identifier for the document."
+    id: ID!
+    "Information classified as 'official'."
+    officialInformation: String
+    "Information classified as 'restricted'."
+    restrictedInformation: String
+    "Information classified as 'confidential'."
+    confidentialInformation: String
+    "Information classified as 'secret'."
+    secretInformation: String
+}
+"Represents the result of a document mutation operation."
+type DocumentMutationResult {
+    "Indicates whether the mutation was successful."
+    success: Boolean!
+    "The ID of the document that was mutated."
+    id: String
+}

@@ -1,0 +1,42 @@
+services:
+  company:
+    container_name: company
+    build:
+      context: ..
+      dockerfile: docker-config/Company.Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - net
+    restart: unless-stopped
+  resource-server-a:
+    container_name: resource-server-a
+    build:
+      context: ..
+      dockerfile: docker-config/Resource-Server-A.Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - net
+    restart: unless-stopped
+  resource-server-b:
+    container_name: resource-server-b
+    build:
+      context: ..
+      dockerfile: docker-config/Resource-Server-B.Dockerfile
+    ports:
+      - "8083:8083"
+    networks:
+      - net
+    restart: unless-stopped
+  graphql-client:
+    container_name: graphql-client
+    build:
+      context: ..
+      dockerfile: docker-config/GraphQL-Client.Dockerfile
+    networks:
+      - net
+    restart: no
+networks:
+  net:
+    driver: bridge

@@ -1,0 +1,14 @@
+{
+    "query" : "mutation {
+        mutateDocumentClassificationLevelOfficial(document : {
+            id : \"1\"
+            officialInformation : \"The official information updated by david.\"
+            restrictedInformation : \"The restricted information updated by david.\"
+            confidentialInformation : \"The confidential information updated by david.\"
+            secretInformation : \"The secret information updated by david.\"
+        }) {
+            success
+            id
+        }
+    }"
+}
